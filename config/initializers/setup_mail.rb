@@ -1,6 +1,5 @@
 if Rails.env.development? || Rails.env.production?
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'secure-meadow-2165.herokuapp.com' }
+  ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     :addresses            => 'smtp.sendgrid.net',
     :port                 => '2525',
