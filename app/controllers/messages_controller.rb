@@ -1,16 +1,21 @@
 class MessagesController < ApplicationController
   def new
     @message = Message.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
     @message = Message.new(message_params)
     if @message.valid?
-      MessageMailer.new_message(@message).deliver
-      flash[:notice] = "Your message has been sent!"
+      MessageMailer.new_message(@message).deliver_now
+      flash.now[:notice] = "Your message has been sent!"
     else
-      flash[:alert] = "An error occurred, please try again."
-      render new
+      flash.now[:alert] = "An error occurred, please try again."
+    end
+    respond_to do |format|
+      format.js
     end
   end
   

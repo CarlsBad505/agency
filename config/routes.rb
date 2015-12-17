@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'messages/new'
-
-  get 'messages/create'
-
+  resources :messages, only: [:new, :create]
   root to: 'home#index'
 
 end

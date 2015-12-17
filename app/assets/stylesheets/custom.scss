@@ -1,0 +1,68 @@
+.text-muted {
+  color: black !important;
+}
+
+.text-muted-contact {
+  color: #fff !important;
+  font-size: 16px !important;
+}
+
+.text-primary {
+  color: #fed136 !important;
+}
+
+// @media (min-width:768px) {
+//   .form-horizontal .form-group-lg .control-label {
+//   padding-top: 14.33px;
+//   font- size: 18px
+//   }
+// }
+
+.btn {
+padding: 15px 30px !important;
+font-size: 25px !important;
+}
+
+.grow:hover { 
+  transform: scale(1.25,1.25); 
+  }
+
+.navbar-default {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.navbar-default .navbar-brand {
+  color: #fed136 !important;
+  font-weight: 800;
+}
+
+.navbar-default .navbar-text {
+  color: #fff !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff !important;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  color: #fff !important;
+  background-color: #fed136 !important;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #222 !important;
+}
+
+@media (max-width:767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: #fff !important;
+  }
+}
+
+.navbar-default .navbar-link {
+  color: #fff !important;
+}
