@@ -11,13 +11,7 @@
                 <div class="row">
                     <div class="col-md-6">
                       <%= form_for Message.new, remote: true do |f| %>
-                      <% if Message.new.errors.any? %>
-                      <ul>
-                        <% Message.new.errors.full_messages.each do |msg| %>
-                          <li><%= msg %></li>
-                        <% end %>
-                      </ul>
-                      <% end %>
+                   
                         <div class="form-group">
                             <%= f.text_field :name, placeholder: "Your Name *", class: 'field' %> 
                             <!--<input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">-->

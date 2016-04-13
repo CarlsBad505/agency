@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    if @message.valid?
+    if @message.save!
       MessageMailer.new_message(@message).deliver_now
       flash.now[:notice] = "Your message has been sent!"
     else

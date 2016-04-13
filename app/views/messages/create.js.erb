@@ -1,2 +1,7 @@
-$partial = $('<%= j render 'home/thanks' %>');
-$('#contact').html($partial);
+<% if @message.valid? %>
+  $partial = $('<%= j render 'home/thanks' %>');
+  $('#contact').html($partial);
+<% else %>
+  $partial = $('<%= j render 'home/error' %>');
+  $('#contact').html($partial);
+<% end %>
