@@ -1,2 +1,12 @@
-$partial = $('<%= j render 'home/thanks' %>');
+<% if @message.errors.any? %>
+  $partial = $('<%= j render 'home/contact' %>');
+<% else %>
+  $partial = $('<%= j render 'home/thanks' %>');
+<% end %>
+
 $('#contact').html($partial);
+
+$('.unique').on("click", function() {
+  <!--Intialize some sort of load icon-->
+  $('#new_message').submit();
+})

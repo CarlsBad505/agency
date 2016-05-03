@@ -9,7 +9,7 @@ class Message < ActiveRecord::Base
   validates :email,
     presence: true,
     length: { minimum: 3, maximum: 100 },
-    uniqueness: { case_sensitive: false },
+    # uniqueness: { case_sensitive: false },
     format: { with: EMAIL_REGEX }
     
   validates :content,
