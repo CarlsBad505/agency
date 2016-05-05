@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    if @message.save!
+    if @message.valid?
       MessageMailer.new_message(@message).deliver_now
     end
     respond_to do |format|
