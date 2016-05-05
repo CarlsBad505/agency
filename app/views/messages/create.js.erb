@@ -1,7 +1,13 @@
-<% if @message.valid? %>
-  $partial = $('<%= j render 'home/thanks' %>');
-  $('#contact').html($partial);
+<% if @message.errors.any? %>
+  $partial = $('<%= j render 'home/contact' %>');
 <% else %>
-  $partial = $('<%= j render 'home/error' %>');
-  $('#contact').html($partial);
+  $partial = $('<%= j render 'home/thanks' %>');
 <% end %>
+
+$('#contact').html($partial);
+
+$('.unique').on("click", function() {
+  <!--Intialize some sort of load icon-->
+  $('#new_message').submit();
+})
+
